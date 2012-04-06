@@ -1,0 +1,9 @@
+*.swp
+java/bin
+java/*.dat
+log.txt
+node/lib/mongoose
+.DS_Store
+*.pyc
+*.dat
+*.sublime-project

@@ -1,0 +1,662 @@
+/*Elements {{{*/
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	width:100%;
+	height: 100%;
+	color: #333333;
+}
+
+h1 {
+	border-bottom: 1px solid #232323;
+	font-weight: normal;
+}
+
+h1 span.subtitle{
+	color: #616161;
+	font-style: italic;
+}
+
+h2{
+	border-bottom: 1px solid black;
+}
+
+textarea.js {
+	width: 680px;
+	height: 180px;
+}
+
+input[type=text], input[type=password], textarea {
+	border: 1px solid #bbb;
+	padding: 5px;
+	width: 300px;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	border-color: #90c655;
+}
+
+select {
+	background-color:#fff;
+	border-width:1px;
+	border-style:solid;
+	padding: 3px;
+}
+/*}}}*/
+
+/* Header {{{*/
+div#stretch-header {
+	width: 100%;
+	background: #232323;
+	background-image: url(images/top.png);
+	background-repeat: repeat-x;
+	color: #dcdcdc;
+	height: 50px;
+}
+
+div#stretch-header a{
+	color: #dcdcdc;
+}
+
+#stretch-header #sh-content {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#stretch-header #sh-content #sh-logo {
+	float: left;
+}
+
+#stretch-header #sh-content #sh-logo img{
+	margin-top: -5px;
+}
+
+#stretch-header #sh-content #sh-logo a{
+	text-decoration: none;
+	font-size: 25px;
+	font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+	font-weight: bold;
+}
+
+#stretch-header #sh-content #sh-logo{
+	margin-bottom: 2px;
+}
+
+#stretch-header #sh-content #sh-user-status {
+	float: right;
+	font-size: 12px;
+	padding: 22px 2px 2px 2px;
+}
+
+#stretch-header #sh-content #sh-user-status a#logout{
+	font-style: italic;
+	color: #c80000;
+	font-size: 1.15em;
+}
+
+#stretch-header #sh-content #sh-user-status i{
+	font-size: 20px;
+}
+/*}}}*/
+
+/* Container Classes {{{*/
+div#container {
+	width: 960px;
+	margin: 10px auto;
+	background: #dcdcdc;
+	padding: 10px;
+}
+
+div#content{
+	width: 940px;
+	margin: 0 auto;
+	background: #FFF;
+	padding:10px;
+}
+
+#content #tabs {
+	padding: 3px;
+}
+
+#content #tabs a{
+	color: #699b32;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+/*}}}*/
+
+/* Footer {{{*/
+div#footer {
+	width: 968px;
+	margin: 10px auto;
+	padding: 7px;
+	text-align:center;
+	font-size: 0.8em;
+	background: #232323;
+	color: #dcdcdc;
+}
+
+div#footer a{
+	color: #dcdcdc;
+}
+
+div#footer a:hover {
+	color: #90c655;
+}/*}}}*/
+
+/*Classes {{{*/
+.highlight {
+	background-color: #fff6bf;
+}
+
+a.boring{
+	color: inherit;
+	text-decoration: none;
+}
+
+a.boring:hover {
+	text-decoration: underline;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.resolutions{
+	vertical-align: top;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.hidden{
+	display: none;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.nobold{
+	font-weight: normal;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.red{
+	color: #a40000;
+}
+
+.right{
+	float: right;
+}
+
+.no-bold{
+	font-weight: normal;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.notification{
+	margin: 10px 0 10px 0;
+	background: #fbe3e4;
+	color: #8a1f11;
+	border-color: #fbc2c4;
+	border: 2px solid #bfbfbf;
+	padding: 5px;
+}
+
+.red-error {
+	background-color: #fbe3e4;
+	color: #8a1f11;
+	border-color: #fbc2c4;
+}
+
+.blue-notify {
+	background-color: #d5edf8;
+	color: #205791;
+	border-color: #92cae4; 
+}
+
+.no-items {
+	font-size: 1.5em;
+	font-style: italic;
+	color: #7c7c7c;
+}
+
+.date-filter {
+	background-color: #595959;
+	color: #fff;
+}
+
+.tooltip {
+	display:none;
+	background: #323232;
+	opacity: 0.95;
+	filter:alpha(opacity=95);
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	font-size:12px;
+	font-weight: bold;
+	min-width:160px;
+	padding:10px;
+	color:#fff;
+	text-align: center;
+	z-index: 103;
+}
+
+a.fakelink {
+	color: blue;
+	text-decoration: underline;
+}
+
+a.fakelink:hover {
+	cursor: pointer;
+}
+
+.section-header {/*{{{*/
+	margin: 10px 0 10px 15px;;
+	width: 925px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #232323;
+}
+/*}}}*/
+/*}}}*/
+
+/*Showone {{{*/
+#showone table.data{
+	display: none;
+}
+
+#showone #blank-content{/*{{{*/
+	background-color: #dcdcdc;
+	padding: 10px;
+	min-width: 400px;
+}
+
+#showone #blank-content #bc-inner{
+	background-color: #fff;
+	padding: 10px;
+}	
+
+#showone #blank-content #bc-content {
+	max-height: 600px;
+	overflow: auto;
+}/*}}}*/
+
+/* Table of Contents {{{*/
+#showone div#toc{
+	display: none;
+	position: fixed;
+	width: 25px;
+	height: 100px;
+	border: 1px solid #699B32;
+	background-color: #232323;
+	z-index: 1000;
+	color: #fff;
+
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+
+}
+
+#showone div#toc:hover {
+	cursor: pointer;
+}
+
+#showone div#toc #title{
+	margin-top: 25px;
+	margin-left: 5px;
+}
+
+#showone div#toc #toc-content{
+	display: none;
+	padding: 5px;
+}
+
+#showone div#toc #toc-content li{
+	margin-left: -1em;
+}
+
+#showone div#toc #toc-content a{
+	color: #fff;
+	text-decoration: none;
+}
+
+#showone div#toc #toc-content a:hover {
+	color: #fff;
+	text-decoration: underline;
+}/*}}}*/
+
+/* Geo Panel {{{*/
+#showone #geo-panel #map-container{
+	margin: 0 auto;
+	width: 760px;
+	padding: 7px;
+	background-color: #dcdcdc;
+}
+
+#showone #geo-panel #map_canvas {
+	margin: 0 auto;
+	width: 800px;
+	height: 500px;
+	border: 1px solid #000;
+}
+
+#showone #geo-panel #no-traffic {
+	width: 680px;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+#showone #geo-panel div#map_canvas{
+	margin: 20px auto;
+	height: 500px;
+	width: 700px;
+}
+/*}}}*/
+
+/*Time/Day Panel {{{*/
+#showone #timeday-panel #times-container{
+	margin: 0 auto;
+	background-color: #dcdcdc;
+	width: 725px;
+	padding: 25px;
+}
+
+#showone #timeday-panel #times {
+	width: 725px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid #000;
+}/*}}}*/
+
+/*Trends Panel {{{*/
+#showone #trends-panel h2#trends #date-range {
+	font-size: 14px;
+	font-style: italic;
+	color: #242741;
+}
+
+#showone #trends-panel h2#trends a {
+	font-size: 12px;
+	font-style: italic;
+	color: #8f1a1a;
+}
+
+#showone #trends-panel h2#trends #change-form {
+	display: inline;
+}
+
+#showone #trends-panel h2#trends #change-form label {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#showone #trends-panel h2#trends #change-form input[type="text"] {
+	width: 150px;
+	padding: 1px;
+	font-size: 12px;
+}
+
+#showone #trends-panel h2#trends #change-form button {
+	font-size: 12px;
+}
+
+#showone #trends-panel div#traffic-img .value{
+	float: left;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#showone #trends-panel div#traffic-img img{
+	margin: 0 auto;
+}
+
+#showone #trends-panel div#traffic .small{
+	font-size: 0.6em;
+}
+
+#showone #trends-panel div#pages-pane {
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#showone #trends-panel div#pages-pane .label{
+	text-align: left;
+}
+
+#showone #trends-panel div#pages-pane .value{
+	margin-top: 10px;
+}
+
+#showone #trends-panel div#pages-pane span.pane{
+	margin-right: 90px;
+	max-width:305px;
+}
+
+#showone #trends-panel #bpr-pane{
+	width: 740px;
+	margin: 0 auto;
+}
+
+#showone #trends-panel #bpr-pane span.pane {
+	margin-right: 100px;
+}
+
+#showone #trends-panel #bpr-pane .value{
+	padding: 15px 7px 7px 7px;
+	width: 275px;
+	margin-bottom: 20px;
+}
+
+#showone #trends-panel table.display th{
+	background-color: #ededed;
+	-webkit-border-radius: 4px;
+	padding: 4px;
+}
+
+#showone #trends-panel table.display .table-left{
+	text-align: left;
+}
+
+#showone #trends-panel table.display td{
+	font-weight: 1.2em;
+	padding-bottom: 3px;
+}
+
+#showone #trends-panel #traffic-chart-div .visualize {
+	margin: 0 auto;
+}
+/*}}}*/
+
+/* Traffic {{{*/
+#showone #traffic table.traffic-report tr.large {
+	font-size: 5em;
+}
+
+#showone #traffic table.traffic-report tr.large td{
+	padding-bottom: 10px;
+}
+
+#showone #traffic table.traffic-report tr.tier-2{
+	font-size: 3.0em;
+}
+
+#showone #traffic table.traffic-report td.time-frame {
+	width: 225px;
+}
+
+#showone #traffic table.traffic-report td.traffic-stat{
+	width: 140px;
+	text-align: center;
+	font-weight: bold;
+	padding: 0 7px 0;
+}
+
+#showone #traffic table.traffic-report td.traffic-stat .type{
+	font-size: 0.6em;
+}
+
+#showone #traffic th{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#showone div#unhide-months, div#hide-months {
+	width: 300px;
+	text-align: center;
+	margin: 0 auto;
+}
+/*}}}*/
+
+/* Actual Trends {{{*/
+
+#showone #traffic-img #no-traffic {
+	width: 680px;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+#showone #actual-panel div#browser-trend-img .label, #showone #actual-panel div#platform-trend-img .label {
+	margin-bottom: 10px;
+	margin-left: -4px;
+}
+
+#showone #actual-panel div#browser-trend-img .value{
+	margin: 0 auto;
+	width: 700px;
+}
+
+#showone #actual-panel div#platform-trend-img {
+	margin-top: 20px;
+}
+
+#showone #actual-panel div#platform-trend-img .value{
+	margin: 0 auto;
+	width: 700px;
+}
+/*}}}*/
+
+/* Admin Panel{{{*/
+#showone #admin-panel .collapsible-section .sh-content{
+	display: none;
+}
+
+#showone #admin-panel .tall-box {
+	min-height: 50px;
+}
+
+#showone #admin-panel .tall-box .name{
+	margin-top: 15px;
+}
+/* }}} */
+/*}}}*/
+
+/* Notifications {{{*/
+#notifications ul{
+	list-style-type: none;
+	padding: 1px;
+}
+
+#flash-errors{
+	margin: 0 auto;
+	margin-top: 15px;
+	border: 2px solid #FBC2C4;
+	background: #FBE3E4;
+	color: #8A1F11;
+	width:300px;
+	text-align: center;
+	clear:both;
+}
+
+#success-messages{	
+	margin: 0 auto;
+	margin-top: 15px;
+	border: 2px solid #C6D880;
+	background: #E6EFC2;
+	color: #264409;
+	width: 300px;
+	text-align: center;
+	clear:both;
+}/*}}}*/
+
+/* Used in: 
+	-applications/adminpanel
+	-applications/show
+	-users/show
+	-applications/manage
+	-applications/manage/[id] (for listing users)
+*/
+.list-item{/*{{{*/
+	padding: 3px;
+	height: 40px;
+	border: 2px solid #FFFFFF;
+}
+
+.list-item:hover {
+	background: #f3f3f3;
+	border-color: #90c655;
+}
+
+.list-item .name {
+	font-size: 18px;
+	margin-top: 7px;
+}
+
+.list-item .name .subname {
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+	color: #616161;
+}
+
+.list-item .summary {
+	float: right;
+	margin-right: 7px;
+	margin-top: 10px;
+	padding: 3px;
+	font-size: 12px;
+	color: #7c7c7c;
+	text-align: center;
+	margin-left: 25px;
+	max-width: 250px;
+}
+
+.list-item .summary span.bold {
+	color: #616161;
+}
+
+.list-item .links {
+	float: right;
+	margin-top: 5px;
+}
+
+.list-item small {
+	font-size: 0.6em;
+}
+/*}}}*/
+
+/* div.field used in users/[update, profile, create], sessions/create */
+div.field{
+	margin-top: 10px;
+}
+
+/* Used on applications/manage/[id] */
+div#search-user {/*{{{*/
+}
+
+div#search-user #search{
+	margin-top: 15px;
+}/*}}}*/

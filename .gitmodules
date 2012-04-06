@@ -1,0 +1,3 @@
+[submodule "node/lib/mongoose"]
+	path = node/lib/mongoose
+	url = git://github.com/LearnBoost/mongoose.git
